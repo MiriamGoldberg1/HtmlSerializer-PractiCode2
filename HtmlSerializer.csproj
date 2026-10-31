@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>HtmlSerializer</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="JSON\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="JSON\HtmlTags.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JSON\HtmlVoidTags.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <!-- העתקת קבצי ה-JSON לתיקיית הפלט (bin) בכל בנייה,
+       כדי שמחלקת HtmlHelper תוכל לקרוא אותם בזמן ריצה -->
+
+</Project>
